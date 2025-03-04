@@ -1,0 +1,136 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 02/15/25 by USER
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "R7_ENG_1402_Holder - Arkusz1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.ActivateView("Widok rysunku15")
+boolstatus = Part.Extension.SelectByRay(0.2538875391877919441, 0.1225774968959223582, -499.9551236976736845, 0, 0, -1, 0.000312837358631534463, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Element opisowy314@Widok rysunku15", "CENTERLINE", 0.2848952420874469871, 0.123221573814243146, 0, True, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("Element opisowy314@Widok rysunku15", "CENTERLINE", 0.2848952420874469871, 0.123221573814243146, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.2538875391877919441, 0.1225774968959223582, -499.9551236976736845)
+boolstatus = Part.Extension.SelectByRay(0.2538875391877919441, 0.1225774968959223582, -499.9551236976736845, 0, 0, -1, 0.0003067412868165945864, 1, False, 0, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.2538875391877919441, 0.1225774968959223582, -499.9551236976736845)
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.Extension.SelectByID2("Linia przekroju2", "SECTIONLINE", 0.308590560706774375, 0.2324272804526991143, 0, False, 0, Nothing, 0)
+boolstatus = Part.DeSelectByID("Linia przekroju2", "SECTIONLINE", 0.308590560706774375, 0.2324272804526991143, 0)
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku16")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku16")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku16")
+boolstatus = Part.Extension.SelectByRay(0.04641343565623365364, 0.06028668249485773928, -499.9643279544343386, 0, 0, -1, 0.0002668170997092038149, 1, False, 0, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku16")
+boolstatus = Part.Extension.SelectByRay(0.0453474950968918572, 0.06265575020544297824, -499.9727293727075903, 0, 0, -1, 0.000213766507894588392, 1, False, 0, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.0453474950968918572, 0.06265575020544297824, -499.9727293727075903)
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku15")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku15")
+boolstatus = Part.Extension.SelectByRay(0.2538374912144497064, 0.1286322302571548393, -499.9551236976736845, 0, 0, -1, 0.0003421732453145971188, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("Element opisowy314@Widok rysunku15", "CENTERLINE", 0.2849350008621586716, 0.1259149721360888763, 0, True, 0, Nothing, 0)
+Dim myDisplayDim As Object
+Set myDisplayDim = Part.AddDimension2(0.272240204118314455, 0.1791487447165914515, 0)
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku15")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.Extension.SelectByID2("RD14@Widok rysunku15", "DIMENSION", 0.2636960255372481909, 0.1664824080888231972, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.Extension.SelectByID2("RD15@Widok rysunku15", "DIMENSION", 0.2684969797642597356, 0.1738594840961823762, 0, False, 0, Nothing, 0)
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Arkusz1")
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+Dim swErrors As Long
+Dim swWarnings As Long
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+
+' Save As
+longstatus = Part.SaveAs3("G:\.shortcut-targets-by-id\1wB3C7psRW9DwIbbp428GwwekvqOcbzY-\SimBa\Projekty (dawniej rakiety)\R7\03_Propulsion\Model 3D w SolidWorks\Komora spalania\Rysunki techniczne\R7_ENG_1402_Holder.pdf", 0, 2)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ExitApp
+End Sub

@@ -1,0 +1,89 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 02/12/25 by USER
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "R7_ENG_1401_Injector - Arkusz1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.Extension.SelectByRay(0.1541981019776349771, 0.06682685695435297557, -0.01280473428698769567, 0, 0, -1, 0.0001714918691158954784, 1, False, 0, 0)
+Dim myDisplayDim As Object
+Set myDisplayDim = Part.AddDimension2(0.1530884487068850663, 0.05916016162917185628, 0)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.1565687248742370641, 0.07126547003735282659, 0.01731317235396545584, 0, 0, -1, 0.0001714918691158954784, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1522309893613055798, 0.07086195975708013683, 0.01731317235396545584, 0, 0, -1, 0.0001714918691158954784, 1, True, 0, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.1522309893613055798, 0.07086195975708013683, 0.01731317235396545584)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.1565687248742370641, 0.07126547003735282659, 0.01731317235396545584)
+boolstatus = Part.Extension.SelectByRay(0.1565687248742370641, 0.07126547003735282659, 0.01731317235396545584, 0, 0, -1, 0.0004373792626897529266, 1, False, 0, 0)
+boolstatus = Part.DeSelectByID("", "EDGE", 0.1565687248742370641, 0.07126547003735282659, 0.01731317235396545584)
+boolstatus = Part.Extension.SelectByID2("RD3@Widok rysunku2", "DIMENSION", 0.1531997578759619338, 0.0589921664902114673, 0, False, 0, Nothing, 0)
+Part.HideDimension
+Part.HideDimension
+Part.ClearSelection2 True
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.Extension.SelectByID2("Arkusz1", "SHEET", 0.2187228400597380773, 0.04877580318377931073, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD2@Widok rysunku2", "DIMENSION", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("RD1@Widok rysunku2", "DIMENSION", 0, 0, 0, True, 0, Nothing, 0)
+boolstatus = Part.Extension.SketchBoxSelect("0.218723", "0.048776", "0.000000", "0.197598", "0.077263", "0.000000")
+Part.HideDimension
+Part.HideDimension
+Part.ClearSelection2 True
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.Extension.SelectByRay(0.1790328731935764972, 0.06691369126777813037, 0.03474438638545507274, 0, 0, -1, 0.0003627577616799716005, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1806332750833410938, 0.07288852498956591153, 0.03595519042772821194, 0, 0, -1, 0.0003627577616799716005, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.2069112877461399824, 0.07001555939070502887, 0)
+Part.ClearSelection2 True
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByRay(0.1814868227578821935, 0.06702038472709576089, 0.03052107905847378788, 0, 0, -1, 0.0003627577616799716005, 1, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1876750433983052357, 0.0689408669948131797, 0.0211417649524605622, 0, 0, -1, 0.0003627577616799716005, 1, True, 0, 0)
+Set myDisplayDim = Part.AddDimension2(0.1954636659284928468, 0.05901837527827262508, 0)
+Part.ClearSelection2 True
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", True, 9, 2, True, 12, 12, "", "x", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", True, 9, 2, True, 12, 12, "", "x4", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", True, 9, 2, True, 12, 12, "", "x45", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", True, 9, 2, True, 12, 12, "", "x45<MOD-DEG>", True, "", "", False)
+boolstatus = Part.EditDimensionProperties2(0, 0, 0, "", "", True, 9, 2, True, 12, 12, "", "x45<MOD-DEG>", True, "", "", False)
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.ActivateSheet("Arkusz1")
+Part.ClearSelection2 True
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+Dim swErrors As Long
+Dim swWarnings As Long
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ExitApp
+End Sub

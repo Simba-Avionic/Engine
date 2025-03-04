@@ -1,0 +1,133 @@
+' ******************************************************************************
+' swxJRNL.swj - journal recorded on 02/13/25 by USER
+' *****************************************************************************
+Dim swApp As Object
+
+Dim Part As Object
+Dim boolstatus As Boolean
+Dim longstatus As Long, longwarnings As Long
+
+Sub main()
+
+Set swApp = Application.SldWorks
+
+swApp.ActivateDoc2 "R7_ENG_1402_Holder.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+Set Part = swApp.ActiveDoc
+Dim myModelView As Object
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+
+' Redraw
+Part.GraphicsRedraw2
+boolstatus = Part.Extension.SelectByID2("P³aszczyzna przednia", "PLANE", 0, 0, 0, True, 1, Nothing, 0)
+Dim sViewData As Object
+Set sViewData = Part.ModelViewManager.CreateSectionViewData()
+Set sViewData.FirstPlane = Nothing
+sViewData.FirstReverseDirection = False
+sViewData.FirstOffset = 0.01
+sViewData.FirstRotationX = 0
+sViewData.FirstRotationY = 0
+sViewData.FirstColor = 16711680
+sViewData.ShowSectionCap = True
+sViewData.KeepCapColor = False
+sViewData.GraphicsOnlySection = False
+sViewData.ZonalSection = True
+sViewData.SectionedZones = 1
+sViewData.SelectiveSection = False
+sViewData.ExcludeSelectedItems = True
+sViewData.TransparentSection = False
+sViewData.SectionTransparentItemsTransparent = True
+sViewData.TransparencyValue = 0.9
+boolstatus = Part.ModelViewManager.CreateSectionView(sViewData)
+Part.ClearSelection2 True
+boolstatus = Part.Extension.SelectByID2("Obrót1", "BODYFEATURE", 0, 0, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByID2("Szkic1", "SKETCH", 0, 0, 0, False, 0, Nothing, 0)
+Part.EditSketch
+Part.ClearSelection2 True
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 22
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "R7_ENG_1100_Walls - Arkusz1", False, longstatus
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+boolstatus = Part.ActivateView("Widok rysunku3")
+boolstatus = Part.Extension.SelectByRay(0.3427503685386266152, 0.1512103166237123986, -499.5491699132820713, 0, 0, -1, 0.0006009079173666922926, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.3555511460560739634, 0.2112859575023364189, -499.5491699132820713, 0, 0, -1, 0.0003158074186135095048, 2, False, 0, 0)
+boolstatus = Part.ActivateView("Widok rysunku5")
+boolstatus = Part.Extension.SelectByRay(0.1936738411255389258, 0.1081078824074730299, -499.9915988315848381, 0, 0, -1, 0.0003795243021406263274, 2, False, 0, 0)
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.Extension.SelectByRay(0.2165896108595627978, 0.2048154057552112883, -500, 0, 0, -1, 0.0004400379521363822718, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.2177544172034532322, 0.2292763389769101878, -500, 0, 0, -1, 0.0004400379521363822718, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByRay(0.1489014199868193, 0.2114159750372570368, -500, 0, 0, -1, 0.0004400379521363822718, 2, False, 0, 0)
+boolstatus = Part.Extension.SelectByID2("RD1@Widok rysunku2", "DIMENSION", 0.1490308429139182156, 0.2292763389804016727, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SelectByRay(0.1719387010104299063, 0.2209932716425778432, -500.0630268702236663, 0, 0, -1, 0.0004400379521363822718, 2, False, 0, 0)
+boolstatus = Part.ActivateSheet("Arkusz1")
+boolstatus = Part.Extension.SelectByID2("Arkusz1", "SHEET", 0.2405328523728659518, 0.2194401965208825356, 0, False, 0, Nothing, 0)
+boolstatus = Part.Extension.SketchBoxSelect("2.405329", "2.194402", "0.000000", "2.397563", "2.194402", "0.000000")
+boolstatus = Part.ActivateView("Widok rysunku2")
+boolstatus = Part.Extension.SelectByRay(0.1489485508506194766, 0.2290337044641279629, -500, 0, 0, -1, 0.0002496893515775988354, 2, False, 0, 0)
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+Dim swErrors As Long
+Dim swWarnings As Long
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+Part.ClearSelection2 True
+
+' Save As
+longstatus = Part.SaveAs3("G:\.shortcut-targets-by-id\1wB3C7psRW9DwIbbp428GwwekvqOcbzY-\SimBa\Projekty (dawniej rakiety)\R7\03_Propulsion\Model 3D w SolidWorks\Komora spalania\Rysunki techniczne\R7_ENG_1100_Walls.pdf", 0, 2)
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Zoom To Fit
+Part.ViewZoomtofit2
+
+' Save
+boolstatus = Part.Save3(1, swErrors, swWarnings)
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+Set Part = swApp.ActiveDoc
+Set myModelView = Part.ActiveView
+myModelView.FrameLeft = 0
+myModelView.FrameTop = 0
+Set myModelView = Part.ActiveView
+myModelView.FrameState = swWindowState_e.swWindowMaximized
+swApp.ActivateDoc2 "R7_ENG_1402_Holder.SLDPRT", False, longstatus
+Set Part = swApp.ActiveDoc
+swApp.ExitApp
+End Sub
